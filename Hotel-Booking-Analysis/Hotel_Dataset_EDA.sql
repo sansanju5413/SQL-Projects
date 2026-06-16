@@ -114,10 +114,10 @@ select arrival_date_month, sum(adults)
 from hotel_staging2
 where is_canceled=0
 group by arrival_date_month
-order by sum(adults) asc;  #in january adults will book the hotel minimum with 493,, same thing can be done in year also, but im not interested in years
+order by sum(adults) asc;  #in january adults will book the hotel minimum with 493,, same thing can be done in year also 
 
 
-# and alo can do the weekend stays from adult,children and babies , and week days also, for learning same , i am not gonna do that
+# and also can do the weekend stays from adult,children and babies , and week days also, for learning same , i am not gonna do that
 select *
 from hotel_staging2;
 
@@ -217,7 +217,7 @@ order by 1 desc;    # 973 repeated customers are booked again
 select count(is_canceled)
 from hotel_staging2
 where is_canceled>0
-and previous_cancellations>0  #319 are cancelled again and again #we can block them from booking
+and previous_cancellations>0  #319 are cancelled again and again 
 ;
 #customer cancellation with previous not cancellation
 select count(is_canceled)
